@@ -3,8 +3,10 @@ import image_TP from "../assets/Party.png";
 import { InputText } from "../components/inputText";
 import { InputDate } from "../components/inputDate";
 import { DataContext } from "../store/dataEvent";
+import { useNavigate } from "react-router-dom";
 
 export const CreatePage = () => {
+  const navigate = useNavigate();
   // const [startDate, setStartDate] = useState(new Date());
   const { allState } = useContext(DataContext);
   const {
@@ -101,7 +103,12 @@ export const CreatePage = () => {
             onChange={handleChange}
           />
           <div className="flex justify-center my-8">
-            <button className=" bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-3 px-10 lg:px-16 md:px-8 rounded-xl text-white text-xl">
+            <button
+              onClick={() => {
+                navigate("/event");
+              }}
+              className=" bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-3 px-10 lg:px-16 md:px-8 rounded-xl text-white text-xl"
+            >
               🎉 Create my event
             </button>
           </div>

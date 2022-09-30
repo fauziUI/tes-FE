@@ -1,5 +1,7 @@
 import image_LP from "../assets/image_LP.svg";
+import { useNavigate } from "react-router-dom";
 export const HomePage = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-[#F6F2FF] h-full min-h-screen p-8">
       <div className="flex flex-col-reverse md:flex md:flex-row md:justify-around items-center lg:px-28 lg:py-20">
@@ -19,7 +21,12 @@ export const HomePage = () => {
             </div>
           </h2>
           <div className="hidden md:flex justify-end">
-            <button className=" bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-3 px-10 lg:px-16  rounded-xl text-white text-xl">
+            <button
+              onClick={() => {
+                navigate("/create");
+              }}
+              className=" bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-3 px-10 lg:px-16  rounded-xl text-white text-xl"
+            >
               🎉 Create my event
             </button>
           </div>
@@ -27,7 +34,12 @@ export const HomePage = () => {
       </div>
 
       <div className="text-center md:hidden">
-        <button className=" bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-2 px-16 rounded-xl text-white text-base">
+        <button
+          onClick={() => {
+            navigate("/create");
+          }}
+          className=" bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-2 px-16 rounded-xl text-white text-base"
+        >
           🎉 Create my event
         </button>
       </div>

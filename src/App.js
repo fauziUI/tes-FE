@@ -10,8 +10,8 @@ function App() {
       <DataProvide>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="create" element={<CreatePage />} />
-          <Route path="event" element={<EventPage />} />
+          <Route path="/create" element={<CreatePage />} />
+          <Route path="/event" element={<EventPage />} />
         </Routes>
       </DataProvide>
     </BrowserRouter>
