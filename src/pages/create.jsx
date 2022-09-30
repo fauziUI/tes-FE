@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
 import image_TP from "../assets/Party.png";
 import { InputText } from "../components/inputText";
 import { InputDate } from "../components/inputDate";
+import { DataContext } from "../store/dataEvent";
 
 export const Create = () => {
   // const [startDate, setStartDate] = useState(new Date());
-  const [startDate, setStartDate] = useState();
+  const { allState } = useContext(DataContext);
+  const { startDate, setStartDate, endDate, setEndDate } = allState;
+
   const [state, setState] = useState({
     eventName: "",
     email: "",
