@@ -5,9 +5,15 @@ please click this URL --> (https://envited-fauzi.vercel.app/)
 ## To run the code:
 Run the following commands
 `
-  $ git clone https://github.com/fauziUI/tes-FE.git path
+  $ git clone https://github.com/fauziUI/tes-FE.git path 
+`
+`
   $ cd path
+`
+`
   $ npm install
+`
+`
   $ npm start
 `
 
