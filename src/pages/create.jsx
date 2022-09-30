@@ -4,10 +4,19 @@ import { InputText } from "../components/inputText";
 import { InputDate } from "../components/inputDate";
 import { DataContext } from "../store/dataEvent";
 
-export const Create = () => {
+export const CreatePage = () => {
   // const [startDate, setStartDate] = useState(new Date());
   const { allState } = useContext(DataContext);
-  const { startDate, setStartDate, endDate, setEndDate } = allState;
+  const {
+    startDate,
+    endDate,
+    setEventName,
+    setHostName,
+    setStartDate,
+    setEndDate,
+    setLocation,
+    setPhoto,
+  } = allState;
 
   const [state, setState] = useState({
     eventName: "",
@@ -43,6 +52,9 @@ export const Create = () => {
 
   return (
     <div className="bg-white w-full h-full min-h-screen p-8">
+      <h1 className="text-[#240D57] text-3xl md:text-5xl lg:text-6xl font-bold text-center my-4">
+        Create Your Event
+      </h1>
       <div className="md:flex justify-center lg:py-20">
         <div className="text-center">
           <img

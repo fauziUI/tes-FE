@@ -1,16 +1,17 @@
-import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
-import { Home } from "./pages/home";
-import { Create } from "./pages/create";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { DataProvide } from "./store/dataEvent";
+import { HomePage } from "./pages/home";
+import { CreatePage } from "./pages/create";
+import { EventPage } from "./pages/event";
 
 function App() {
   return (
     <BrowserRouter>
       <DataProvide>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="create" element={<Create />} />
-          {/* <Route path="event" element={<EventPage />} /> */}
+          <Route path="/" element={<HomePage />} />
+          <Route path="create" element={<CreatePage />} />
+          <Route path="event" element={<EventPage />} />
         </Routes>
       </DataProvide>
     </BrowserRouter>

@@ -1,5 +1,5 @@
 import image_LP from "../assets/image_LP.svg";
-export const Home = () => {
+export const HomePage = () => {
   return (
     <div className="bg-[#F6F2FF] h-full min-h-screen p-8">
       <div className="flex flex-col-reverse md:flex md:flex-row md:justify-around items-center lg:px-28 lg:py-20">
