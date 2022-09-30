@@ -22,10 +22,8 @@ export const CreatePage = () => {
 
   const [state, setState] = useState({
     eventName: "",
-    email: "",
-    noHP: "",
-    noIdentitas: "",
-    noNPWP: "",
+    hostName: "",
+    locationName: "",
   });
 
   function handleChange(evt) {
@@ -43,13 +41,7 @@ export const CreatePage = () => {
     if (event.target.files[0]) {
       let preview = document.getElementById("imgPreview");
       let src = URL.createObjectURL(event.target.files[0]);
-      // setLink(src);
-      // setFotoKTP(true);
     }
-
-    setState({
-      ...state,
-    });
   };
 
   return (
